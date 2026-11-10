@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "fssd-rick-and-morty-router",
-    "slug": "fssd-rick-and-morty-router",
+    "slug": "fssd-rick-and-morty-gallery-ap",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -11,6 +11,7 @@
       "icon": "./assets/expo.icon"
     },
     "android": {
+      "package": "com.github.floooooooooorian.fssd.rickandmorty.router",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -24,6 +25,15 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true,
+          "barcodeScannerEnabled": true
+        }
+      ],
       "expo-router",
       [
         "expo-splash-screen",
@@ -45,8 +55,9 @@
         }
       },
       "eas": {
-        "projectId": "1a0183bd-7c96-4e1a-96c7-4bdbc1235179"
+        "projectId": "18baef76-5046-4951-bf35-7cff042f89f3"
       }
-    }
+    },
+    "owner": "florianweber"
   }
 }

@@ -16,12 +16,12 @@ export default function CharacterItem({ character }: Props) {
   const router = useRouter();
 
   const handlePress = () => {
-    router.navigate("/character/" + character.id);
+    router.navigate(`/character/${character.id}`);
   };
 
   return (
     <View style={styles.card}>
-      <Pressable onPress={handlePress} >
+      <Pressable onPress={handlePress}>
         <Image source={{ uri: character.image }} style={styles.image} />
       </Pressable>
 

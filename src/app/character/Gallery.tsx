@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import CharacterItem from "../../components/CharacterItem";
 
-const API_URL = "https://rickandmortyapi.com/api/character";
+const API_URL = process.env.EXPO_PUBLIC_API_URL as string;
 
 export default function Gallery() {
   const [characters, setCharacters] = useState<Character[]>([]);
